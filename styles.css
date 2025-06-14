@@ -263,7 +263,7 @@ section div button:hover {
     border: 1px solid #118792;
     height: 325px;
     /* Define a altura */
-    width: 380px;
+    width: 345px;
     /* Define a largura */
     border-radius: 20px;
     /* Define o raio da borda */
@@ -273,11 +273,6 @@ section div button:hover {
     /* Alinha o texto ao centro */
     transition: transform 0.4s;
     /* Define a transição */
-
-
-
-
-
 
 
 
@@ -300,9 +295,6 @@ section div button:hover {
  
 
 }
-
-
-
 
 
 
@@ -345,14 +337,17 @@ section div button:hover {
 }
 
 .card-projetos {
-    display: flex;
-    /* Define o elemento como um contêiner flexível */
-    justify-content: space-around;
-    /* Distribui o espaço entre os itens */
-    margin-top: 100px;
-    /* Define a margem superior */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 0 40px;
 }
+
+  .card-projetos .card:nth-child(4) {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
 
 footer {
     padding-top: 5px;
